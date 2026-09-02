@@ -52,4 +52,4 @@ En [`configs/`](configs/) van los archivos de configuración relevantes, (ver `c
 - [ ] Escribir posts explicando cada avance
 
 ---
-*Última actualización: repo inicial con topología base (Proxmox + Technitium + Cloudflared).*
+*Última actualización: Fix "unknow" as commiter.*
