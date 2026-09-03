@@ -30,7 +30,7 @@ https://cloudflare-dns.com/dns-query (1.0.0.1)
 ```
 ## Block Lists
 
-Por el momento solo agregue 2 block lists pero siendo de las mas grandes y robustas, **AdGuard DNS Filter** y **OISD**. Para el bloqueo de ADs, malware, adware, etc.
+Por el momento solo agregue 2 block lists pero siendo de las mas grandes y robustas, **AdGuard DNS Filter** y **OISD**. Para el bloqueo de ADs, malware, tracking, adware, etc.
 
 ```
 https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt

@@ -16,7 +16,7 @@ Este homelab arrancó como un entorno de pruebas sobre Proxmox para experimentar
 Technitium DNS          Cloudflared
 (192.168.1.60)          (192.168.1.51)
       |                        |
-Cloudflare (DoH,           acer1.corvexdev.com → 192.168.1.50
+Cloudflare (           acer1.corvexdev.com → 192.168.1.50
 filtrado ads/           dns-server.corvexdev.com → 192.168.1.60
 malware/tracking)       (protegido por Cloudflare Access + OTP por email)
 ```
@@ -52,4 +52,4 @@ En [`configs/`](configs/) van los archivos de configuración relevantes, (ver `c
 - [ ] Escribir posts explicando cada avance
 
 ---
-*Última actualización: Change forawarder to Cloudflare.*
+*Última actualización: Technitium dont handle DoH.*
