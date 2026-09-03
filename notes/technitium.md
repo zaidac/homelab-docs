@@ -22,19 +22,24 @@ A diferencia de herramientas como Pi-hole, que se enfocan casi exclusivamente en
 
 Esto permite resolver los servicios internos por nombre en vez de memorizar IPs, algo que va a ser cada vez más útil a medida que sume más contenedores.
 
-**Forwarders (DNS-over-HTTPS):** el servidor reenvía las consultas externas a dos perfiles de **NextDNS** vía DoH:
+**Forwarders (DNS-over-HTTPS):** el servidor reenvía las consultas externas a los servidores de **Cloudflare** vía DoH:
 
 ```
-https://dns.nextdns.io/<MY_NEXTDNS_PROFILE_ID>/DNS-SERVER (NEXTDNS_IP_SERVER_1)
-https://dns.nextdns.io/<MY_NEXTDNS_PROFILE_ID>/DNS-SERVER (NEXTDNS_IP_SERVER_2)
+https://cloudflare-dns.com/dns-query (1.1.1.1)
+https://cloudflare-dns.com/dns-query (1.0.0.1)
 ```
+## Block Lists
 
-Estos perfiles tienen configurada una lista amplia de bloqueo de dominios de ads, tracking y malware, delegando el filtrado a NextDNS en vez de mantener listas propias en Technitium.
+Por el momento solo agregue 2 block lists pero siendo de las mas grandes y robustas, **AdGuard DNS Filter** y **OISD**. Para el bloqueo de ADs, malware, adware, etc.
 
+```
+https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
+https://big.oisd.nl/domainswild2
+```
 
 ## Problemas encontrados
 
-Sin problemas hasta el momento con la resolución DNS ni con el reenvío vía DoH a NextDNS.
+Anteriormente se utilizaba a NextDNS como forwarder via DoH, configurando las listas de bloqueo directamente en NextDNS pero al limitar las consultas a 300.000 por cuenta, conveni cambiar de forwarder a Cloudflare y configurar las listas de bloqueos en Technitium directamente
 
 ## Distribución a los clientes
 

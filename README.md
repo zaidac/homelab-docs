@@ -16,7 +16,7 @@ Este homelab arrancó como un entorno de pruebas sobre Proxmox para experimentar
 Technitium DNS          Cloudflared
 (192.168.1.60)          (192.168.1.51)
       |                        |
-NextDNS (DoH,           acer1.corvexdev.com → 192.168.1.50
+Cloudflare (DoH,           acer1.corvexdev.com → 192.168.1.50
 filtrado ads/           dns-server.corvexdev.com → 192.168.1.60
 malware/tracking)       (protegido por Cloudflare Access + OTP por email)
 ```
@@ -27,7 +27,7 @@ Diagrama completo (editable) en [`diagrams/topology.drawio`](diagrams/topology.d
 |-------------|---------------------------------------------------|----------------|
 | Router      | Gateway de la red local, DHCP                      | 192.168.1.1    |
 | Proxmox     | Hipervisor (LXC), corre en un Acer One             | 192.168.1.50   |
-| Technitium  | Servidor DNS propio, forwarders vía DoH a NextDNS  | 192.168.1.60   |
+| Technitium  | Servidor DNS propio, forwarders vía DoH a Cloudflare  | 192.168.1.60   |
 | Cloudflared | Túnel de Cloudflare, expone interfaces admin bajo `*.corvexdev.com` | 192.168.1.51 |
 
 **Dominio:** `*.corvexdev.com` (subdominios para cada servicio expuesto vía túnel).
@@ -52,4 +52,4 @@ En [`configs/`](configs/) van los archivos de configuración relevantes, (ver `c
 - [ ] Escribir posts explicando cada avance
 
 ---
-*Última actualización: Fix "unknow" as commiter.*
+*Última actualización: Change forawarder to Cloudflare.*
